@@ -1,0 +1,65 @@
+[
+  {
+    "_id": "5df1a3a84b240a269dd15c43",
+    "name": "Admin",
+    "email": "admin@gmail.com",
+    "role": "user",
+    "password": "123456"
+  },
+  {
+    "_id": "5df1a37a4b240a269dd15c3f",
+    "name": "Publisher 1",
+    "email": "publisher1@gmail.com",
+    "role": "publisher",
+    "password": "123456"
+  },
+  {
+    "_id": "5df1a3824b240a269dd15c40",
+    "name": "Publisher 2",
+    "email": "publisher2@gmail.com",
+    "role": "publisher",
+    "password": "123456"
+  },
+  {
+    "_id": "5df1a38a4b240a269dd15c41",
+    "name": "Publisher 3",
+    "email": "publisher3@gmail.com",
+    "role": "publisher",
+    "password": "123456"
+  },
+  {
+    "_id": "5df1a3944b240a269dd15c42",
+    "name": "Publisher 4",
+    "email": "publisher4@gmail.com",
+    "role": "publisher",
+    "password": "123456"
+  },
+  {
+    "_id": "5df1a3dd4b240a269dd15c44",
+    "name": "User 1",
+    "email": "user1@gmail.com",
+    "role": "user",
+    "password": "123456"
+  },
+  {
+    "_id": "5df1a3e44b240a269dd15c45",
+    "name": "User 2",
+    "email": "user2@gmail.com",
+    "role": "user",
+    "password": "123456"
+  },
+  {
+    "_id": "5df1a3e94b240a269dd15c46",
+    "name": "User 3",
+    "email": "user3@gmail.com",
+    "role": "user",
+    "password": "123456"
+  },
+  {
+    "_id": "5df1a3f14b240a269dd15c47",
+    "name": "User 4",
+    "email": "user4@gmail.com",
+    "role": "user",
+    "password": "123456"
+  }
+]

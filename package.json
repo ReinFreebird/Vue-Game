@@ -1,0 +1,66 @@
+{
+  "name": "vue-game",
+  "version": "1.0.0",
+  "description": "Project View",
+  "main": "./bin/server.js",
+  "scripts": {
+    "start": "SET NODE_ENV=production npm run server",
+    "server": "node ./bin/server.js",
+    "dev": "nodemon server",
+    "docs": "./node_modules/.bin/jsdoc -c jsdoc.json",
+    "cli": "node cliApp.js",
+    "test": "nodemon -x mocha --recursive || true "
+  },
+  "keywords": [],
+  "author": "ReinFreebird",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6",
+    "express-mongo-sanitize": "^1.3.2",
+    "express-rate-limit": "^5.0.0",
+    "helmet": "^3.21.2",
+    "hpp": "^0.2.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.13",
+    "mongoose-sequence": "^5.2.2",
+    "morgan": "^1.9.1",
+    "node-geocoder": "^3.25.0",
+    "nodemailer": "^6.4.2",
+    "pug": "^2.0.4",
+    "slugify": "^1.3.6",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-mocha": "^6.2.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "jsdoc": "^3.6.3",
+    "mocha": "^6.2.2",
+    "nodemon": "^2.0.1",
+    "prettier": "^1.19.1",
+    "supertest": "^4.0.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReinFreebird/Vue-Game.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ReinFreebird/Vue-Game/issues"
+  },
+  "homepage": "https://github.com/ReinFreebird/Vue-Game#readme"
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "_id": "5d725a4a7b292f5f8ceff789",
+    "title": "Item 1",
+    "description": "Deskripsi item 1",
+    "expire": 8,
+    "price": 8000,
+    "minimumQuality": 1,
+    "availability": true,
+    "store": "5dee49bcdd4c3e5416b9c93f",
+    "user": "5df1a37a4b240a269dd15c3f"
+  },
+  {
+    "_id": "5d725c84c4ded7bcb480eaa0",
+    "title": "Item dua",
+    "description": "Deskripsi item 2 berikut dengan keterangannya",
+    "expire": 12,
+    "price": 10000,
+    "minimumQuality": 2,
+    "availability": true,
+    "store": "5dee49bcdd4c3e5416b9c93f",
+    "user": "5df1a37a4b240a269dd15c3f"
+  },
+  {
+    "_id": "5d725cb9c4ded7bcb480eaa1",
+    "title": "Item 3",
+    "description": "Deskripsi item 3 beserta teman-temannya",
+    "expire": 10,
+    "price": 12000,
+    "minimumQuality": 1,
+    "availability": true,
+    "store": "5dee49bcdd4c3e5416b9c93e",
+    "user": "5df1a3824b240a269dd15c40"
+  },
+  {
+    "_id": "5d725cd2c4ded7bcb480eaa2",
+    "title": "Item 4",
+    "description": "Deskripsi item 4 beserta teman-temannya",
+    "expire": 12,
+    "price": 10000,
+    "minimumQuality": 2,
+    "availability": true,
+    "store": "5dee49bcdd4c3e5416b9c93e",
+    "user": "5df1a3824b240a269dd15c40"
+  },
+  {
+    "_id": "5d725ce8c4ded7bcb480eaa3",
+    "title": "Item lima",
+    "description": "Deskripsi item 5 beserta teman-temannya",
+    "expire": 10,
+    "price": 9000,
+    "minimumQuality": 3,
+    "availability": true,
+    "store": "5dee49bcdd4c3e5416b9c93d",
+    "user": "5df1a38a4b240a269dd15c41"
+  },
+  {
+    "_id": "5d725cfec4ded7bcb480eaa4",
+    "title": "Item enam",
+    "description": "enam keenam dan seterusnya",
+    "expire": 10,
+    "price": 12000,
+    "minimumQuality": 4,
+    "availability": false,
+    "store": "5dee49bcdd4c3e5416b9c93d",
+    "user": "5df1a38a4b240a269dd15c41"
+  },
+  {
+    "_id": "5d725cfec4ded7bcb480eaa5",
+    "title": "Item 7",
+    "description": "Tujuh dan teman-temannya sehingga nanti akan mudah untuk dilacak.",
+    "expire": 8,
+    "price": 8000,
+    "minimumQuality": 4,
+    "availability": false,
+    "store": "5dee49bcdd4c3e5416b9c93c",
+    "user": "5df1a3944b240a269dd15c42"
+  },
+  {
+    "_id": "5d725cfec4ded7bcb480eaa6",
+    "title": "Item 8",
+    "description": "Delapan menuju ke angka selanjutnya",
+    "expire": 6,
+    "price": 5000,
+    "minimumQuality": 3,
+    "availability": false,
+    "store": "5dee49bcdd4c3e5416b9c93c",
+    "user": "5df1a3944b240a269dd15c42"
+  }
+]

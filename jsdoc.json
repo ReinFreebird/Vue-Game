@@ -1,0 +1,38 @@
+{
+
+	"source": {
+		"include": [
+			"."
+		],
+		"exclude": [
+			"node_modules",
+			"views",
+			"public",
+			"docs"
+		],
+		"includePattern": ".+\\.js(doc|x)?$",
+		"excludePattern": "( node_modules/|docs  )"
+	},
+
+	"recurseDepth": 10,
+
+	"plugins": [
+		"plugins/markdown"
+	],
+
+	"templates":{
+		"cleverLinks": true,
+		"monospaceLinks": true
+	},
+
+	"opts": {
+		"encoding": "utf8",
+		"readme": "./README.md",
+		"destination": "./docs/",
+		"recurse": true,
+		"verbose": true,
+		"tutorials": "./playground/",
+		"template": "./docs/default"
+	}
+
+}
