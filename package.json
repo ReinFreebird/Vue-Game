@@ -4,7 +4,7 @@
   "description": "Project View",
   "main": "./bin/server.js",
   "scripts": {
-    "start": "SET NODE_ENV=production npm run server",
+    "start": "SET NODE_ENV=development npm start server",
     "server": "node ./bin/server.js",
     "dev": "nodemon server",
     "docs": "./node_modules/.bin/jsdoc -c jsdoc.json",

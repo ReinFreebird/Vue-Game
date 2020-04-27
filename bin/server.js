@@ -12,7 +12,9 @@ const dotenv = require('dotenv');
 const db = require('../config/db');
 
 /** import environmental variables from .env */
-dotenv.config({ path: './config/.env' });
+dotenv.config({ path: './config/.env.sample' });
+
+console.log(__dirname);
 
 /** Connect to MongoDB */
 db.connectMongo();
