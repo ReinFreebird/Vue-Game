@@ -6,22 +6,12 @@
  */
 
  const asyncHandler = require('../handlers/asyncHandlers');
- const ProductionQueue= require('../models/ProductionQueue');
+ const {ProductionQueueMain,ProductionQueuePLC1,ProductionQueueRFID1,ProductionQueueSensor1,ProductionQueueMachine1}
+ = require('../models/ProductionQueue');
 
- var defaultProcess=[
- {name:'0',machine:{station:"1",ip:"127.0.0.1",status:"Online"},onModel:"RFID",action:"READ",address:""},
 
- {name:'1',machine:{station:"1",ip:"127.0.0.1",protocol:"UDP",port:2000,status:"Online"},onModel:"PLC",action:"WRITE",address:""
- ,value:1},
-
- {name:'2',machine:{station:"2",status:"Online"},onModel:"Sensor",action:"READ",address:""},
-
- {name:'3',machine:{station:"2",ipAddress:"127.0.0.1",port:"2000"},onModel:"Machine",action:"WRITE",address:""
- ,value:'Machine Goes Boom'},
- ];
  var currentProcess;
  var currentIndex=0;
- varfinished=true;
 
  function processData(curProcess){
  	var data=curProcess;
@@ -31,6 +21,32 @@
  }
  function sleep(millis) {
  	return new Promise(resolve => setTimeout(resolve, millis));
+ }
+ async function processInstruction(currentProcess){
+ 	return new Promise(resolve=>{
+ 		switch (currentProcess.onModel){
+ 			case 'RFID': ProductionQueueRFID1.create(currentProcess);break;
+ 			case 'PLC': ProductionQueuePLC1.create(currentProcess);break;
+ 			case 'Sensor': ProductionQueueSensor1.create(currentProcess);break;
+ 			case 'Machine': ProductionQueueMachine1.create(currentProcess);break;
+ 		}
+ 		resolve('done');
+ 	})
+ }
+ exports.runInstruction= async function(curInstruction){
+ 	return new Promise(async (resolve,reject)=>{
+ 		try{
+ 			switch (currentInstruction.onModel){
+ 				case 'RFID': ProductionQueueRFID1.create(currentProcess);break;
+ 				case 'PLC': ProductionQueuePLC1.create(currentProcess);break;
+ 				case 'Sensor': ProductionQueueSensor1.create(currentProcess);break;
+ 				case 'Machine': ProductionQueueMachine1.create(currentProcess);break;
+ 			}
+ 			resolve('done');
+ 		}catch (err){
+ 			reject(err.message);
+ 		}
+ 	})
  }
  exports.runProcess = function(){
  	return new Promise (async (resolve,reject)=>{
@@ -46,7 +62,8 @@
  			}
  			let onProcess = currentProcess[currentIndex++];
  			await sleep(1000);
- 			await ProductionQueue.create(onProcess);
+ 			await ProductionQueueMain.create(onProcess);
+ 			await processInstruction(onProcess);
 
 
  		}

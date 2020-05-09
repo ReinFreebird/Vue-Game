@@ -55,8 +55,31 @@ const ProductionMachineSchema= Schema({
     default: Date.now
   }
 });
-const connection = createConnection('mongodb://127.0.0.1:27017/phibase2',{ useNewUrlParser: true,
+const connectionMain = createConnection('mongodb://127.0.0.1:27017/phibase2',{ useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
     useFindAndModify: false});
- module.exports = connection.model('ProductionQueue', ProductionQueueSchema);
+const connectionPLC1 = createConnection('mongodb://127.0.0.1:27017/plc1',{ useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false});
+const connectionSensor1 = createConnection('mongodb://127.0.0.1:27017/sensor1',{ useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false});
+const connectionRFID1 = createConnection('mongodb://127.0.0.1:27017/rfid1',{ useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false});
+const connectionMachine1 = createConnection('mongodb://127.0.0.1:27017/machine1',{ useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false});
+ module.exports = {
+  ProductionQueueMain:connectionMain.model('ProductionQueue', ProductionQueueSchema),
+  ProductionQueuePLC1:connectionPLC1.model('ProductionQueue', ProductionQueueSchema),
+  ProductionQueueSensor1:connectionSensor1.model('ProductionQueue', ProductionQueueSchema),
+  ProductionQueueRFID1:connectionRFID1.model('ProductionQueue', ProductionQueueSchema),
+  ProductionQueueMachine1:connectionMachine1.model('ProductionQueue', ProductionQueueSchema),
+
+ };

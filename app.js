@@ -20,6 +20,9 @@ const mongoSanitize = require('express-mongo-sanitize');
 
 /** Routes Files */
 const rock = require('./routes/rock');
+const test= require('./routes/test');
+const user= require('./routes/users');
+const auth= require('./routes/auth');
 
 const dashboard = require('./routes/dashboard');
 
@@ -74,6 +77,9 @@ app.use(cors()); // Disable if not needed
 
 /** Mounted Routing */
 app.use('/api/v1/rock', rock);
+app.use('/api/v1/test', test);
+app.use('/api/v1/auth',	auth);
+app.use('/api/v1/user',	user);
 
 /** Route for dashboard */
 app.use('/dashboard', dashboard);
