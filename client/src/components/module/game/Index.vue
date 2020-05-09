@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import axios from '../../../axios-auth'
+
 export default {
   name: 'Index',
   data() {
@@ -24,6 +26,19 @@ export default {
       alert(localStorage.getItem('token'))
     },
   },
+  mounted(){
+    axios.get('/auth/me', {
+        headers: {
+        "authorization" : "Bearer "+localStorage.getItem('token')
+      }
+    })
+        .then((res) => {
+        console.log(res);
+        console.log(localStorage.getItem('token'));
+        localStorage.setItem('name',res.data.data.name);
+        localStorage.setItem('email',res.data.data.email);})
+        .catch(err => console.error(err))
+  }
   
 }
 </script>
