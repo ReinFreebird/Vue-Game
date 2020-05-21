@@ -6,4 +6,5 @@ module.exports = {
     requireModuleExtension: false
   },
   outputDir:path.resolve(__dirName,'../public'),
+  
 }

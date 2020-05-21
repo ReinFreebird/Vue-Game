@@ -6,6 +6,7 @@ import * as actions from './actions';
 import * as mutations from './mutations';
 import * as getters from './getters';
 
+import music from './modules/music'
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
@@ -21,6 +22,6 @@ export const store = new Vuex.Store({
   actions,
 
   modules: {
-
+    music,
   },
 });

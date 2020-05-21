@@ -38,6 +38,7 @@ export default {
         localStorage.setItem('name',res.data.data.name);
         localStorage.setItem('email',res.data.data.email);})
         .catch(err => console.error(err))
+    
   }
   
 }
