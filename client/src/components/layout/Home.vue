@@ -1,7 +1,8 @@
 <template>
   <div id="welcome" style="padding:50px;">
     <div class="col-sm-3">
-    <img style="height:500px;" src="./../../../public/ReinSprite.png" alt="Girl in a jacket">
+    <img style="max-width: 100%;
+            max-height: 100%;" src="./../../../public/ReinSprite.png" alt="Girl in a jacket">
     
     
     </div>
